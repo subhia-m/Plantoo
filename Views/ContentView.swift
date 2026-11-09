@@ -10,10 +10,7 @@ struct ContentView: View {
     }
 }
 
-#Preview {
+ #Preview {
     ContentView()
 }
 
-#Playground {
-    _ = 1 + 2
-}

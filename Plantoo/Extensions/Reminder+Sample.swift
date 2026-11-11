@@ -13,7 +13,7 @@ extension Reminder {
         Reminder(plantName: "Monstera", room: .kitchen, light: .fullSun,
                  wateringDays: .daily, water: .low, isDone: true),
    
-        Reminder(plantName: "Pothos", room: .bedroom, light: .fullSun,
+        Reminder(plantName: "Pothos", room: .bedroom, light: .partialSun,
                  wateringDays: .daily, water: .low),
 
         Reminder(plantName: "Orchid", room: .livingRoom, light: .partialSun,

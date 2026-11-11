@@ -8,6 +8,7 @@
 import Foundation
 import Observation
 
+//@Observable lets SwiftUI watch the ViewModel and refresh the screen when its data changes.”
 @Observable
 class RemindersViewModel {
     var reminders: [Reminder] = Reminder.samples
@@ -24,6 +25,7 @@ class RemindersViewModel {
         reminders.filter { $0.isDone }.count
     }
     
+    //if the list is empty, return 0 right away and skip the division.”
     var progress: Double {
         guard !reminders.isEmpty else { return 0 }
         return Double(completedCount) / Double(reminders.count)
@@ -47,6 +49,7 @@ class RemindersViewModel {
         reminders.append(reminder)
     }
     
+    //guard let safely unwraps an optional. If the value is nil, the function exits early, so the rest of the code can rely on it
     func toggle(_ reminder: Reminder) {
         guard let index = reminders.firstIndex(where: { $0.id == reminder.id }) else { return }
         reminders[index].isDone.toggle()

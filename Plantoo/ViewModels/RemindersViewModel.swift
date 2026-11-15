@@ -10,17 +10,16 @@ import Observation
 
 //@Observable lets SwiftUI watch the ViewModel and refresh the screen when its data changes.”
 @Observable
+// A class (not a struct) so the list, form and progress bar all share the same data
 class RemindersViewModel {
     var reminders: [Reminder] = []
-    //For testing: start with Reminder.samples
-    // TODO: start empty before final version.
-    
+  
     // MARK: - Derived state
     
     var isEmpty: Bool {
         reminders.isEmpty
     }
-    
+    // $0 = the reminder currently being checked as the array is searched
     var completedCount: Int {
         reminders.filter { $0.isDone }.count
     }

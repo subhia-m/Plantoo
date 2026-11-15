@@ -59,8 +59,6 @@ enum WateringDays: String, CaseIterable, Identifiable {
         }
     }
 }
-
-
 // MARK:- Water
 enum Water: String, CaseIterable, Identifiable {
     

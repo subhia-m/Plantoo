@@ -6,7 +6,8 @@
 //
 
 import Foundation
-
+// An extension adds to Reminder without editing Reminder.swift,
+// so the model file stays short and only describes the data.
 extension Reminder {
     // Fake data so I can see something on screen before the form works
     static let samples: [Reminder] = [

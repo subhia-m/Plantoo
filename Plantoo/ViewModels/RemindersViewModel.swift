@@ -11,7 +11,7 @@ import Observation
 //@Observable lets SwiftUI watch the ViewModel and refresh the screen when its data changes.”
 @Observable
 class RemindersViewModel {
-    var reminders: [Reminder] = Reminder.samples
+    var reminders: [Reminder] = []
     //For testing: start with Reminder.samples
     // TODO: start empty before final version.
     
@@ -49,10 +49,18 @@ class RemindersViewModel {
         reminders.append(reminder)
     }
     
+    // Replaces an existing reminder with its edited version
+    func update(_ reminder: Reminder) {
+        // Find where the old version sits in the array (nil if it isn't there)
+        guard let index = reminders.firstIndex(where: { $0.id == reminder.id }) else { return }
+        reminders[index] = reminder
+    }
+    
     //guard let safely unwraps an optional. If the value is nil, the function exits early, so the rest of the code can rely on it
     func toggle(_ reminder: Reminder) {
         guard let index = reminders.firstIndex(where: { $0.id == reminder.id }) else { return }
-        reminders[index].isDone.toggle()
+           reminders[index].isDone.toggle()
+        
     }
     
     func delete(_ reminder: Reminder) {

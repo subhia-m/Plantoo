@@ -10,7 +10,7 @@ import Foundation
 // One plant care reminder. A struct because it is plain data.
 struct Reminder: Identifiable {
     // Unique tag, set once and never changed
-    let id = UUID()
+    var id = UUID()
     var plantName: String
     var room: Room
     var light: Light

@@ -4,6 +4,8 @@ import SwiftUI
     var body: some Scene {
         WindowGroup {
             ContentView()
+            //forse the app to be on dark mode always
+                .preferredColorScheme(.dark)
         }
     }
 }

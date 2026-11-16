@@ -12,7 +12,7 @@ import Foundation
 // String = each case has a text value (rawValue)
 // CaseIterable = gives me "enum".allCases for the Picker
 // Identifiable = lets SwiftUI tell each case apart in ForEach
-enum Light: String, CaseIterable, Identifiable {
+enum Light: String, CaseIterable, Identifiable, Codable {
     case fullSun = "Full Sun"
     case partialSun = "Partial Sun"
     case lowLight = "Low Light"
@@ -22,7 +22,7 @@ enum Light: String, CaseIterable, Identifiable {
 }
 
 // MARK:- Room
-enum Room: String, CaseIterable, Identifiable {
+enum Room: String, CaseIterable, Identifiable , Codable{
     case bedroom = "Bedroom"
     case livingRoom = "Living Room"
     case kitchen = "Kitchen"
@@ -34,7 +34,7 @@ enum Room: String, CaseIterable, Identifiable {
 }
 
 // MARK:- watering Days
-enum WateringDays: String, CaseIterable, Identifiable {
+enum WateringDays: String, CaseIterable, Identifiable, Codable{
     
     case daily = "Every day"
     case everyTwoDays = "Every 2 days"
@@ -60,7 +60,7 @@ enum WateringDays: String, CaseIterable, Identifiable {
     }
 }
 // MARK:- Water
-enum Water: String, CaseIterable, Identifiable {
+enum Water: String, CaseIterable, Identifiable, Codable{
     
     case low = "20-50 ml"
     case moderate = "50-100 ml"

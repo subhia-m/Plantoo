@@ -4,6 +4,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @Environment(\.scenePhase) private var scenePhase
+    
     @State private var viewModel = RemindersViewModel()
     
     // Purely visual state, so it lives in the view, not the ViewModel
@@ -23,6 +25,7 @@ struct ContentView: View {
             ZStack {
                 Color.appBackground.ignoresSafeArea()
                 VStack(spacing: 5) {
+                    
                     Rectangle()
                         .fill(Color.white.opacity(0.2))
                         .frame(height: 1)
@@ -47,8 +50,8 @@ struct ContentView: View {
                             .padding(.horizontal)
                             .padding(.vertical, 5)
                         
-                        List(viewModel.reminders) { reminder in
-                            PlantRowView(reminder: reminder) {
+                        List(viewModel.todayReminders) { reminder in
+                            PlantRowView(reminder: reminder, isDone: viewModel.isDone(reminder)) {
                                 viewModel.toggle(reminder)
                             }
                             .contentShape(Rectangle())   // makes the whole row tappable
@@ -86,6 +89,9 @@ struct ContentView: View {
         .sheet(item: $reminderToEdit) { reminder in
             SetReminderView(viewModel: viewModel, reminder: reminder)
         }
+        .onChange(of: scenePhase) { _, phase in
+            if phase == .active { viewModel.refresh() }
+        }
     }
     // MARK: - Pieces of the screen
     private var addButton: some View {
@@ -111,7 +117,7 @@ struct ContentView: View {
 private struct PlantRowView: View {
     
     let reminder: Reminder
-    
+    let isDone: Bool
     let onToggle: () -> Void
     
     var body: some View {
@@ -120,9 +126,9 @@ private struct PlantRowView: View {
             
             Button(action: onToggle) {
                 
-                Image(systemName: reminder.isDone ? "checkmark.circle.fill" : "circle")
+                Image(systemName: isDone ? "checkmark.circle.fill" : "circle")
                     .font(.system(size: 28))
-                    .foregroundStyle(reminder.isDone
+                    .foregroundStyle(isDone
                                      
                                      ? Color.appGreen
                                      
@@ -155,9 +161,9 @@ private struct PlantRowView: View {
             }
             //Grey when selected
             
-            .opacity(reminder.isDone ? 0.55 : 1)
+            .opacity(isDone ? 0.55 : 1)
             
-            .animation(.easeInOut(duration: 0.2), value: reminder.isDone)
+            .animation(.easeInOut(duration: 0.2), value: isDone)
             
             Spacer()
         }

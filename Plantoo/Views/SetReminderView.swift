@@ -159,7 +159,8 @@ struct SetReminderView: View {
                         if let reminder {
                             // Editing: keep the same id and done state, then update
                             newReminder.id = reminder.id
-                            newReminder.isDone = reminder.isDone
+                            newReminder.lastCompletedDate = reminder.lastCompletedDate
+                            newReminder.isArchived = reminder.isArchived
                             viewModel.update(newReminder)
                         }else {
                             viewModel.add(newReminder)

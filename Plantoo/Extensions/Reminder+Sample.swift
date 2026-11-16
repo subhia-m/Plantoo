@@ -12,7 +12,7 @@ extension Reminder {
     // Fake data so I can see something on screen before the form works
     static let samples: [Reminder] = [
         Reminder(plantName: "Monstera", room: .kitchen, light: .fullSun,
-                 wateringDays: .daily, water: .low, isDone: true),
+                 wateringDays: .daily, water: .low),
    
         Reminder(plantName: "Pothos", room: .bedroom, light: .partialSun,
                  wateringDays: .daily, water: .low),

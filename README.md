@@ -2,10 +2,10 @@
 Planto is an iOS application designed to help users take care of their plants by organizing plant information and managing personalized care reminders.
 
 <p align="center">
-<img src="screenshot/start.png">
-<img src="screenshot/add reminder.png">
-<img src="screenshot/plants list.png">
-<img src="screenshot/all done.png">
+<img src="screenshots/start.png">
+<img src="screenshots/add reminder.png">
+<img src="screenshots/plants list.png">
+<img src="screenshots/all done.png">
 </p>
 
 ## Features

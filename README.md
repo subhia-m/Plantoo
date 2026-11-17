@@ -7,6 +7,7 @@ Planto is an iOS application designed to help users take care of their plants by
 <img src="screenshot/plants list.png">
 <img src="screenshot/all done.png">
 </p>
+
 ## Features
 - Add Plants: Add plants to your personal collection. 
 

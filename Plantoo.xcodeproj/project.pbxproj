@@ -6,8 +6,15 @@
 	objectVersion = 90;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9771FD0530AB65D000CBE299 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9771FCFA30AB65D000CBE299 /* README.md */; };
+		977D507E30AB60A30095CD43 /* Planto.icon in Resources */ = {isa = PBXBuildFile; fileRef = 977D507D30AB60A30095CD43 /* Planto.icon */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		000000000000000000000120 /* Plantoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plantoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9771FCFA30AB65D000CBE299 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		977D507D30AB60A30095CD43 /* Planto.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = Planto.icon; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -31,6 +38,8 @@
 			isa = PBXGroup;
 			children = (
 				000000000000000000000010 /* Plantoo */,
+				977D507D30AB60A30095CD43 /* Planto.icon */,
+				9771FCFA30AB65D000CBE299 /* README.md */,
 				000000000000000000000020 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,6 +111,8 @@
 		000000000000000140000000 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
+				9771FD0530AB65D000CBE299 /* README.md in Resources */,
+				977D507E30AB60A30095CD43 /* Planto.icon in Resources */,
 			);
 		};
 /* End PBXResourcesBuildPhase section */
@@ -250,6 +261,8 @@
 		000000000000000111000000 /* Debug configuration for PBXNativeTarget "Plantoo" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = Planto;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GWT48P4FH9;
@@ -289,6 +302,8 @@
 		000000000000000112000000 /* Release configuration for PBXNativeTarget "Plantoo" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = Planto;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GWT48P4FH9;

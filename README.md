@@ -1,9 +1,5 @@
 # 🌱 Planto
 
-<p align="center">
-  <img src="Screenshots/icon.png" width="120" style="border-radius: 27px">
-</p>
-
 <h1 align="center">Planto</h1>
 <p align="center">
   <strong>Your plants, your care, your routine.</strong>
@@ -84,6 +80,3 @@ Plantoo/
 
 iOS
 
-<p align="center">
-  Made with 🌱
-</p> 
